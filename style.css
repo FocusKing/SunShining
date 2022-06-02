@@ -10,7 +10,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(58, 132, 170), rgb(21, 121, 17),rgb(7, 44, 87));
+    background: linear-gradient(rgb(58, 132, 170),rgb(7, 44, 87));
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:white;
 
@@ -31,9 +31,13 @@ body {
 .degree-area {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
 }
 .degree-area span {
     margin: 10px;
     font-size: 34px;
+}
+.degree-area h2 {
+    font-size: 40px;
 }
