@@ -20,7 +20,7 @@ In this project we start out by creating our own repository. Third-party APIs al
 ## Resources
 [Git Hub Repo](https://github.com/FocusKing/SunShining)
 
-[LIVE SITE](https://focusking.github.io/seo-refactor/)
+[LIVE SITE](https://focusking.github.io/SunShining/)
 
 ## Table of Contents 
 
