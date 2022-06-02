@@ -15,3 +15,25 @@ body {
     color:white;
 
 }
+
+.location, .temparature {
+    height: 45vh;
+    width: 50%;
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temparature {
+    flex-direction: column;
+}
+
+.degree-area {
+    display: flex;
+    align-items: center;
+
+}
+.degree-area span {
+    margin: 10px;
+    font-size: 34px;
+}
