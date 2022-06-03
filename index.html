@@ -5,171 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Input weather icons as well as bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
     <title>Sunshine</title>
 </head>
+<h1 class="display-3">Sun Shining Weather App</h1>
 
+<div class="container">
+    <section class="vh-100" style="background-color: rgb(8, 0, 83);">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+      
+              <div class="card" style="border-radius: 10px;">
+                <div class="bg-image ripple" data-mdb-ripple-color="light"
+                  style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/draw2.webp"
+                    class="w-100" />
+                  <div class="mask" style="background-color: whitesmoke">
+                    <div class="d-flex justify-content-between p-4">
+                      <a href="#!" class="text-white"><i class="fas fa-chevron-left fa-lg"></i></a>
+                      <a href="#!" class="text-white"><i class="fas fa-cog fa-lg"></i></a>
+                    </div>
+                    <div class="text-center text-white">
+                      <p class="h3 mb-4">Clear night</p>
+                      <p class="h5 mb-4">Detroit, US</p>
+                      <p class="display-2"><strong>20°C</strong> </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4 text-center">
+                  <a href="#!" class="text-body"><i class="fas fa-chevron-up fa-lg mb-4"></i></a>
+                  <div class="d-flex justify-content-between mb-3">
+                    <p class="h5 fw-normal">Yesterday</p>
+                    <p class="h5 fw-normal"><i class="fas fa-sun pe-2"></i> 23°C</p>
+                  </div>
+                  <div class="d-flex justify-content-between" style="color: whitesmoke;">
+                    <p class="h5 fw-normal">Tommorow</p>
+                    <p class="h5 fw-normal"><i class="fas fa-cloud pe-2"></i> 21°C</p>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>   
 <body>
     <header>
-        <div class="container">
-            <div class="card card-1">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
-                    </ul>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="temp">23&deg;</div>
-                                    <div class="location">Coimbra, Portugal</div>
-                                </div>
-                                <div class="col-6 justify-content-right">
-                                    <img class="img-fluid" src="https://img.icons8.com/plasticine/100/000000/sun.png">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="card card-2">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0"></li>
-                        <li data-target="#demo" data-slide-to="1" class="active"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
-                    </ul>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="row row1">21&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/ios/100/000000/sun.png" /></div>
-                                    <div class="row row3">12:00</div>
-                                    <div class="row row4">PM</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">20&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/ios/100/000000/sun.png" /></div>
-                                    <div class="row row3">1:00</div>
-                                    <div class="row row4">PM</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">20&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/windows/100/000000/cloud.png" /></div>
-                                    <div class="row row3">2:00</div>
-                                    <div class="row row4">PM</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">19&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/windows/100/000000/cloud.png" /></div>
-                                    <div class="row row3">3:00</div>
-                                    <div class="row row4">PM</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">18&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/cotton/64/000000/rain--v3.png" /></div>
-                                    <div class="row row3">4:00</div>
-                                    <div class="row row4">PM</div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div class="card card-3">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2" class="active"></li>
-                    </ul>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="row row1">21&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/ios/100/000000/sun.png" /></div>
-                                    <div class="row row3">Mon</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">20&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/ios/100/000000/sun.png" /></div>
-                                    <div class="row row3">Tue</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">16&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/windows/100/000000/cloud.png" /></div>
-                                    <div class="row row3">Wed</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">17&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/windows/100/000000/cloud.png" /></div>
-                                    <div class="row row3">Thu</div>
-                                </div>
-                                <div class="col">
-                                    <div class="row row1">18&deg;</div>
-                                    <div class="row row2"><img class="img-fluid"
-                                            src="https://img.icons8.com/cotton/64/000000/rain--v3.png" /></div>
-                                    <div class="row row3">Fri</div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        
 
 
 
-    </header>
-
-    <h1 i class="display-4">Sun Shining Weather App</h1> <i class='fas fa-temperature-high'></i>
-
-
-
-    <!-- <div class="card-body p-4 border-top border-bottom mb-2">
-        <div class="row text-center"> -->
-
-
-    <script src="/script.js"></script>
+        <script src="/script.js"></script>
 </body>
 
 </html>

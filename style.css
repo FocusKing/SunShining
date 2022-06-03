@@ -1,41 +1,33 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     background: linear-gradient(rgb(58, 132, 170), rgb(57, 21, 97), rgb(7, 44, 87));
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    
 
 }
 
 div {
-    color: rgb(21, 30, 85);
+    background-color: rgb(21, 30, 85);
     padding: 0;
-    border: 4px;
+    border: 1x;
     margin: 0px;
+    border-radius: 0;
     border-style: solid;
     box-shadow: 24px;
     border-color: lightblue;
-}
+  
+} 
 
-h1 {
-    position: fixed;
+ h1 {
+  
     top: 0;
     align-content: center;
     justify-content: space-between;
+    text-align: center;
 
-}
-
-button {
-    align-content: center;
-    align-items: center;
-}
-
+} 
