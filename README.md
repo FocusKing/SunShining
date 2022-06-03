@@ -34,3 +34,7 @@ Provided notes within each element to explain the changes made throughout the as
 
 ## Visuals
 ![Sunshine image](/asset/images/sunshine.png)
+
+## Test
+
+This project is still under construction!!
