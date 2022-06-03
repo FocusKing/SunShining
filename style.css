@@ -15,29 +15,12 @@ body {
     color:white;
 
 }
-
-.location, .temparature {
-    height: 45vh;
-    width: 50%;
-    display: flexbox;
-    justify-content: space-between;
-    align-items: center;
+div {
+    color: lightblue;
+    padding: 0;
+    border: 5px;
+    border-style: solid;
+    box-shadow: 24px;
 }
 
-.temparature {
-    flex-direction: column;
-}
 
-.degree-area {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-}
-.degree-area span {
-    margin: 10px;
-    font-size: 34px;
-}
-.degree-area h2 {
-    font-size: 40px;
-}
