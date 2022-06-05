@@ -1,3 +1,21 @@
+var cityNameEl = document.querySelector('#city');
+var cityFormEl = document.querySelector('#city-form');
+var weatherEl = document.querySelector('#weather');
+var weatherContainerEl = document.querySelector('#weather-container');
+var forecastContainerEl = document.querySelector('#forecast-container');
+var searchCity = document.querySelector('#search-city');
+var lastEl = document.querySelector('#button-city');
+var citySearchEl = document.querySelector('#city-searches');
+
+
+// having to go through the java script a little slower to have better understand of how to input necessary information into each give element.
+
+
+
+
+
+
+
 // var apiURl = 'http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}'
 // var apiKey = 'a8d4d4e0925590d16cc122c92ab2023c';
 // var coordsUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}`;
