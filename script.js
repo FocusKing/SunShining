@@ -9,7 +9,7 @@ var citySearchEl = document.querySelector('#city-searches');
 
 // use code from activity 7 from class to help!!
 var getCityWeather = function (value) {
-    fetch ('https://api.openweathermap.org/geo/1.0/direct?q=' + value + '&limit=1&appid=afbc3e766ad7b125ff6728193711f7c7')
+    fetch (`https://api.openweathermap.org/geo/1.0/direct?q=' + value + '&limit=1&appid=afbc3e766ad7b125ff6728193711f7c7`)
     .then(function (response) {
         return response.json();
     })
@@ -21,7 +21,14 @@ var getCityWeather = function (value) {
     })
 }
 
+function showWeather(lat, lon) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=a8d4d4e0925590d16cc122c92ab2023c&units=imperial`)
+    .then(function (response) {
+        return response.json();
+    })
+}
 
+// gathered api's from openweather map site.
 
 
 
