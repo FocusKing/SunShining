@@ -6,6 +6,29 @@ var forecastContainerEl = document.querySelector('#forecast-container');
 var searchCity = document.querySelector('#search-city');
 var lastEl = document.querySelector('#button-city');
 var citySearchEl = document.querySelector('#city-searches');
+
+// use code from activity 7 from class to help!!
+var getCityWeather = function (value) {
+    fetch ('https://api.openweathermap.org/geo/1.0/direct?q=' + value + '&limit=1&appid=afbc3e766ad7b125ff6728193711f7c7')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        var lat = data[0].lat;
+        var lon = data[0].lon;
+        showWeather(lat, lon);
+        storeCity(value);
+    })
+}
+
+
+
+
+
+
+
+
+
 // prevents page from stopping restarts the program...
 var submitHandler = function (event) {
     event.preventDefault();
@@ -20,9 +43,23 @@ var submitHandler = function (event) {
         alert('Please enter correct city name!')
     }
 }
-
+// if the correct city name is entered information will be displayed, otherwise you will get an alert to enter the correct city name.
 
 // having to go through the java script a little slower to have better understand of how to input necessary information into each give element.
+
+var buttonHandler = function (event) {
+    var city = event.target.getAttribute('data-city');
+    
+    if (city) {
+        getCityWeather(city);
+        weatherContainerEl.textContent = '';
+    }
+};
+
+function getCity(event) {
+    event.preventDefault();
+    getCityWeather(cityNameEl.value);
+}
 
 
 
