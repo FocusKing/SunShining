@@ -7,7 +7,7 @@ var searchCity = document.querySelector('#search-city');
 var lastEl = document.querySelector('#button-city');
 var citySearchEl = document.querySelector('#city-searches');
 
-// use code from activity 7 from class to help!!
+// use code from activity 7 from class to help!! // gathered api's from openweather map site.
 var getCityWeather = function (value) {
     fetch (`https://api.openweathermap.org/geo/1.0/direct?q=' + value + '&limit=1&appid=afbc3e766ad7b125ff6728193711f7c7`)
     .then(function (response) {
@@ -26,15 +26,55 @@ function showWeather(lat, lon) {
     .then(function (response) {
         return response.json();
     })
+    .then(function (data) {
+        forecastContainerEl.innerHTML = ''; //directly adds to HTML text
+        var temp = data.current.temp;
+        var wind = data.current.wind_speed;
+        var uvi = data.current.uvi;
+        var humidity = data.current.humidity;
+        var tempEl = document.createElement('p');
+        var windEl = document.createElement('p');
+        var uviEl = document.createElement('p');
+        var humidityEl = document.createElement('p');
+        var weatherContainerEl = document.createElement('p');
+
+        tempEl.textContent = "Temp: " + temp;
+        windEl.textContent = "Wind: " + wind;
+        uviEl.textContent = "UV Index: " + uvi;
+        humidityEl.textContent = "Humidity: " + temp;
+        
+        
+        document.body.append(tempEl, windEl, uviEl, humidityEl)
+        weatherContainerEl.append(document);
+
+        //reviewed for loop with class mate
+
+        for (var i = 0; i < 5; i++) {
+            var day = data.daily[i];
+            var max = day.temp.max;
+            var min = day.temp.min;
+            var average = Math.round((max + min) / 2);
+            var tempF = average;
+            var windF = day.wind_speed;
+            var uvF = day.uvi;
+            var humF =day.humidity;
+
+            var tempElF = document.createElement('p');
+            var windElF = document.createElement('p');
+            var uvElF = document.createElement('p');
+            var humElF = document.createElement('p');
+            //var divContainer.className = "card5";       }
+            
+            tempElF.textContent = 'Temperature: ' + tempF;
+            windElF.textContent = 'Wind Speed: ' + windF;
+            uvElF.textContent = 'UV Index: ' + uvF;
+            humElF.textContent = 'Humidity: ' + humF;
+            
+            divContainer.append(tempElF, windElF, uvElF, humElF);
+            forecastContainerEl.append(divContainer);
+        }
+    })
 }
-
-// gathered api's from openweather map site.
-
-
-
-
-
-
 
 // prevents page from stopping restarts the program...
 var submitHandler = function (event) {
@@ -68,6 +108,30 @@ function getCity(event) {
     getCityWeather(cityNameEl.value);
 }
 
+var storeCity = function (city) {
+    var cities = JSON.parse(localStorage.getItem('cities')) || [];
+    if (!cities.includes(city)) {
+        cities.push(city);
+        localStorage.setItem('cities', JSON.stringify(cities));
+        displayLastCitiesButtons();
+    }
+}
+
+var displayLastCitiesButtons = function () {
+    var cities = JSON.parse(localStorage.getItem('cities')) || [];
+    citySearchEl.innerHTML = null;
+    for (var city of cities) {
+        var cityBtn = document.createElement('button');
+        cityBtn.dataset.city = city;
+        cityBtn.className ='btn';
+        cityBtn.textContent = city;
+        citySearchEl.append(cityBtn);
+    }
+}
+// event listenters should be at the end of the project.
+cityFormEl.addEventListener('submit', submitHandler);
+lastEl.addEventListener('click', buttonHandler);
+displayLastCitiesButtons();
 
 
 
@@ -107,7 +171,7 @@ function getCity(event) {
 
 // init();
 
-// temp.textContent = "Temp: " + temp;
+
 // tempEl.textContent = "Temp: " + temp;
 // windEl.textContent = "Wind: " + wind;
 // uviEl.textContent = "UV Index: " + uvi;
