@@ -6,6 +6,20 @@ var forecastContainerEl = document.querySelector('#forecast-container');
 var searchCity = document.querySelector('#search-city');
 var lastEl = document.querySelector('#button-city');
 var citySearchEl = document.querySelector('#city-searches');
+// prevents page from stopping restarts the program...
+var submitHandler = function (event) {
+    event.preventDefault();
+    var cityName = cityNameEl.ariaValueMax.trim();
+
+    if (cityName) {
+        getCityWeather(cityName);
+
+        weatherContainerEl.textContent = '';
+        cityNameEl.value = '';
+    } else {
+        alert('Please enter correct city name!')
+    }
+}
 
 
 // having to go through the java script a little slower to have better understand of how to input necessary information into each give element.
