@@ -10,6 +10,16 @@ body {
     
 
 }
+main {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #forecast-container {
+    display:flexbox;
+    flex-direction: row;
+    
+  }
 
 div {
     background-color: rgb(21, 30, 85);
@@ -31,3 +41,16 @@ div {
     text-align: center;
 
 } 
+.btn {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    border: solid;
+    outline: none;
+    background-color: var(--light-dark);
+  }
+  .btn-inline {
+    display: inline;
+  }
+  
